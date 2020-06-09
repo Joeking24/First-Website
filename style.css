@@ -1,0 +1,121 @@
+/*
+This page is styled in order of when each element is encountered from top to bottom
+*/
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:#d8dbe2ff;
+  margin: 0;
+}
+
+/* Header */
+.top, .bottom {
+  background-color: #373f51ff;
+  color:#a9bcd0ff;
+}
+
+.top {
+  height: 210px;
+  font-size: 30px;
+  font-weight: 80;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.top > h1 {
+  font-weight: 400;
+  padding: 20px 0 0 0;
+}
+/*
+These next 3 chunks are to style the navigation bar - I couldn't make the words separate, so I decided to turn it into a list and make use of the list properties here to achieve what I was looking for
+*/
+header li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 18px;
+  display: inline;
+}
+
+header > nav {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+a:link {
+  color:#58a4b0ff;
+  text-decoration: none;
+}
+a:visited {color:#000000ff}
+a:hover {color:#a9bcd0ff}
+a:active {color:rgb(88, 96, 105)}
+/*
+In the above section, I had to change the active color to something outside of my palette, as no color worked on both the main background and the header/footer. I decided to just use the color slider when clicking on this element to darken the hover color just a bit to make it different, but not unreadable
+*/
+
+/* Image */
+div {
+  padding: 0 20%;
+  margin: 40px 5px;
+  text-align: center;
+}
+
+img {
+  border: 2px solid #373f51ff;
+  border-radius: 3px;
+}
+
+/*Main*/
+h2 {
+  color:#999ac6ff;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+div p {
+  text-align: left;
+}
+/* 
+I struggled with this list quite a bit. After figuring out how to get the list itself aligned properly on the page (bullet points not moving with the text, text not centering exactly, etc), I ran into the problem of the text never stopping as it continued past the edge of the page. The word-wrap was something I found while combing through a list of CSS properties. I'm glad that fixed the earlier problem
+*/
+article ul li {
+  text-align: left;
+  list-style: square;
+  margin: 0 40px;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+/*
+I wish there was a way to get rid of the weird shadow looking thing under the solid line on this horizontal ruler.
+*/
+hr {
+  width: 70px;
+  border-top: 1px solid #373f51ff;
+}
+
+ol {
+  text-align: left;
+  line-height: 25px;
+  margin: 0 0 0 33%
+}
+/*Footer*/
+.bottom {
+  height: 70px;
+  font-size: 14px;
+  text-align: center;
+  padding: 9px 0 0 0;
+}
+
+/*
+This was the color palette that I used. I got it from random generation until I found something I liked on https://coolors.co/  <-- This website was referenced in an earlier lesson
+
+$gainsboro: #d8dbe2ff;
+$light-steel-blue: #a9bcd0ff;
+$cadet-blue: #58a4b0ff;
+$charcoal: #373f51ff;
+$rich-black-fogra-39: #000000ff
+*/
